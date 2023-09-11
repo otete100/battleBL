@@ -11,10 +11,9 @@ html {
 
 body {
     color: #333333;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     background-color: #fff;
-    line-height: 2.4rem;
-    display: none;
+    line-height: 3.2rem;
 }
 
 img {
@@ -22,4 +21,40 @@ img {
     vertical-align: middle;
     -o-object-fit: cover;
        object-fit: cover;
+}
+
+.wrapper {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+a {
+    color: #333;
+}
+
+a:hover {
+    color: #F8B400;
+}
+
+/* ヘッダー
+-------------------------------------------------*/
+header {
+    font-family: 'RocknRoll One', sans-serif;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.flex_between {
+    display: flex;
+    justify-content: space-between;
+}
+h1 {
+    font-size: 3.6rem;
+
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li {
+    margin-left: 1.8rem;
 }
