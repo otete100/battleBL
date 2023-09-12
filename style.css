@@ -6,7 +6,7 @@ html {
     font-family: 'Noto Sans JP', sans-serif;
     /* font-family: 'RocknRoll One', sans-serif; */
     font-size: 62.5%;
-    scroll-behavior: smooth; /*ページ内リンクをなめらかにスクロール*/
+    scroll-behavior: smooth;
 }
 
 body {
@@ -43,6 +43,10 @@ header {
     display: flex;
     align-items: center;
     height: 60px;
+    background: rgba(255, 255, 255, .9);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 .flex_between {
     display: flex;
@@ -50,11 +54,38 @@ header {
 }
 h1 {
     font-size: 3.6rem;
-
 }
 header nav ul {
     display: flex;
 }
 header nav ul li {
     margin-left: 1.8rem;
+}
+
+/* トップ画像
+-------------------------------------------------*/
+.top_image {
+    width: 100%;
+    height: 600px;
+    background-image: url(images/topimg.jpg);
+    background-image: -webkit-image-set(url(images/topimg.jpg) 1x, url(images/topimg@2x.jpg) 2x);
+    background-image: image-set(url(images/topimg.jpg) 1x, url(images/topimg@2x.jpg) 2x);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top_image p {
+    display: block;
+    font-size: 4.8rem;
+    text-height: 4.8rem;
+    color: #fff;
+    font-weight: 800;
+}
+.top_image .caption {
+    margin-top: 60px;
+    font-size: 6rem;
 }
