@@ -36,6 +36,18 @@ a:hover {
     color: #F8B400;
 }
 
+h2 {
+    font-size: 3.6rem;
+    font-family: 'RocknRoll One', sans-serif;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+section {
+    margin: 140px auto 200px;
+    padding-top: 60px;
+}
+
 /* ヘッダー
 -------------------------------------------------*/
 header {
@@ -55,10 +67,11 @@ header {
 h1 {
     font-size: 3.6rem;
 }
-header nav ul {
+
+.header_nav ul {
     display: flex;
 }
-header nav ul li {
+.header_nav ul li {
     margin-left: 1.8rem;
 }
 
@@ -88,4 +101,281 @@ header nav ul li {
 .top_image .caption {
     margin-top: 60px;
     font-size: 6rem;
+}
+
+/* サイト概要
+-------------------------------------------------*/
+main.wrapper {
+    text-align: center;
+}
+
+/* 企画概要
+-------------------------------------------------*/
+.flex_gaiyou img {
+    display: block;
+    width: 487px;
+    height: 649px;
+}
+.flex_gaiyou {
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+h3 {
+    font-family: 'RocknRoll One', sans-serif;
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+}
+.accordion_QA {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    background-color: #fff6c2;
+    border-radius: 5px;
+}
+.accordion_QA summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1em 2em;
+    color: #333333;
+    cursor: pointer;
+    font-weight: 600;
+}
+.accordion_QA summary::-webkit-details-marker {
+    display: none;
+}
+.accordion_QA summary::after {
+    transform: translateY(-25%) rotate(45deg);
+    width: 7px;
+    height: 7px;
+    margin-left: 10px;
+    border-bottom: 3px solid #cfc692;
+    border-right: 3px solid #cfc692;
+    content: '';
+    transition: transform .3s;
+}
+.accordion_QA[open] summary::after {
+    transform: rotate(225deg);
+}
+.accordion_QA p {
+    transform: translateY(-10px);
+    opacity: 0;
+    margin: 0;
+    padding: .3em 2em 1.5em;
+    color: #333333;
+    transition: transform .5s, opacity .5s;
+    text-align: left;
+}
+.accordion_QA[open] p {
+    transform: none;
+    opacity: 1;
+}
+
+/* 共通世界設定
+-------------------------------------------------*/
+.h2_caption {
+    font-family: 'RocknRoll One', sans-serif;
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 50px;
+}
+
+/* 問い合わせ
+-------------------------------------------------*/
+#contact .div_img {
+    width: 200px;
+    height: 170px;
+    margin: 15px auto;
+}
+.button_link {
+    font-family: 'RocknRoll One', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: 0 auto;
+    /* padding: .9em 2em; */
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 0 3px #f8b400;
+    background-color: #f8b400;
+    color: #fff;
+}
+.timeline {
+    margin: 30px auto 0;
+    width: 800px;
+}
+
+/* フッター
+-------------------------------------------------*/
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #f8b400;
+    text-align: center;
+}
+small {
+    font-family: 'RocknRoll One', sans-serif;
+    font-size: 1em;
+    line-height: 60px;
+}
+
+/* 非表示
+-------------------------------------------------*/
+.hamburger_menu {
+    display: none;
+}
+
+/*-------------------------------------------------
+
+  レスポンシブ対応（スマホ）
+
+-------------------------------------------------*/
+@media screen and (max-width: 1023px) { 
+
+    .wrapper
+    {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .sp,
+    .hamburger_menu {
+        display: block;
+    }
+    .pc,
+    .header_nav,
+    #hamburger_icon_check {
+        display: none;
+    }
+
+    section {
+        margin: 40px auto 100px;
+        padding-top: 60px;
+    }
+
+    /* ヘッダー
+    -------------------------------------------------*/
+    h1 {
+        font-size: 2.4rem;
+    }    
+
+    /* ハンバーガーメニュー(アイコン)
+    -------------------------------------------------*/
+    .hamburger_icon {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        height: 60px;
+        width: 60px;
+        z-index: 99;
+        background-color: #f8b400;
+    }
+    .hamburger_icon_text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        margin: auto;
+        font-size: 0.9em;
+    }
+    .hamburger_icon span,
+    .hamburger_icon span:before,
+    .hamburger_icon span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 30px;
+        border-radius: 3px;
+        background-color: #fff;
+        position: absolute;
+        
+    }
+    .hamburger_icon span {
+        top: 30px;
+        right: 15px;
+    }
+    .hamburger_icon span:before {
+        bottom: 15px;
+    }
+    .hamburger_icon span:after {
+        top: 15px;
+    }
+    /* ハンバーガーが開いたら×印にする */
+    #hamburger_icon_check:checked ~ .hamburger_icon span {
+        background-color: #f8b400;
+    }
+    #hamburger_icon_check:checked ~ .hamburger_icon span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    #hamburger_icon_check:checked ~ .hamburger_icon span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    /* ハンバーガーメニュー(メニュー)
+    -------------------------------------------------*/
+    .hamburger_nav {
+        width: 100%;
+        height: 100%;
+        padding: 30px 0;
+        text-align: center;
+        position: fixed;
+        left: 0;
+        z-index: 90;
+        background-color: #fff;
+        font-size: 1.1em;
+        left: 100%;/*値を変更してメニューを画面外へ*/
+        transition: all 0.3s;
+    }
+
+    #hamburger_icon_check:checked ~ .hamburger_nav {
+        left: 0%;/*メニューを画面内へ*/
+    }
+
+    .hamburger_nav {
+        margin-top: 200px;
+    }
+    .hamburger_nav li {
+        font-family: 'RocknRoll One', sans-serif;
+        margin-bottom: 15px;
+    }
+
+    /* トップ画像
+    -------------------------------------------------*/
+    .top_image {
+        width: 100%;
+        height: 300px;
+    }
+    .top_image p {
+        font-size: 1.8rem;
+        text-height: 1.8rem;
+    }
+    .top_image .caption {
+        margin-top: 30px;
+        font-size: 3.2rem;
+    }
+
+    /* 企画概要
+    -------------------------------------------------*/
+    .flex_gaiyou {
+        margin-bottom: 60px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .accordion_QA {
+        max-width: 800px;
+        margin: 0 auto 30px;
+        background-color: #fff6c2;
+        border-radius: 5px;
+    }
+
+
 }
