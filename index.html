@@ -19,7 +19,7 @@
     <!-- ヘッダーメニュー -->
     <header>
         <div class="wrapper flex_between">
-            <a href="#"><h1>現代異能バトルBL企画</h1></a>
+            <a href="#" class="hamburger_a"><h1>現代異能バトルBL企画</h1></a>
             <nav class="header_nav">
                 <ul>
                     <li><a href="#kikakugaiyou">企画概要</a></li>
@@ -28,24 +28,26 @@
                     <li><a href="#contact">問い合わせ</a></li>
                 </ul>
             </nav>
-        <!-- ハンバーガーメニュー -->
-        <div class="hamburger_menu">
-            <input type="checkbox" id="hamburger_icon_check">
-            <label for="hamburger_icon_check" class="hamburger_icon">
-                <span></span>
-            </label>
-            <label for="hamburger_icon_check" class="hamburger_close" ></label>
-            <!-- ハンバーガーメニューリスト -->
-            <nav class="hamburger_nav">
-                <ul>
-                    <li><a href="#kikakugaiyou">企画概要</a></li>
-                    <li><a href="#kyoutuu">異能の王座決定戦</a></li>
-                    <li><a href="#works">作品一覧</a></li>
-                    <li><a href="#contact">問い合わせ</a></li>
-                </ul>
-            </nav>
-        </div>
     </header>
+
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger_menu" >
+        <button class="hamburger" id="js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <!-- ハンバーガーメニューリスト -->
+        <nav class="hamburger_nav" id="js-nav">
+            <ul>
+                <li><a href="#kikakugaiyou">企画概要</a></li>
+                <li><a class="hamburger_a" href="#kyoutuu">異能の王座決定戦</a></li>
+                <li><a class="hamburger_a" href="#works">作品一覧</a></li>
+                <li><a class="hamburger_a" href="#contact">問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- トップ画像 -->
     <div class="top_image">
@@ -69,19 +71,51 @@
         <section id="kikakugaiyou">
             <h2>企画概要</h2>
             <div class="flex_gaiyou">
-                <img src="images/gaiyou1.png" srcset="images/gaiyou1.png 1x, images/gaiyou1@2x.png 2x"
-                    alt="企画概要１">
-                <img src="images/gaiyou2.png" srcset="images/gaiyou2.png 1x, images/gaiyou2@2x.png 2x"
-                    alt="企画概要２">
+                <a href="images/gaiyou1@2x.png">
+                    <img src="images/gaiyou1.png" srcset="images/gaiyou1.png 1x, images/gaiyou1@2x.png 2x"
+                        alt="企画概要１">
+                </a>
+                <a href="images/gaiyou2@2x.png">
+                    <img src="images/gaiyou2.png" srcset="images/gaiyou2.png 1x, images/gaiyou2@2x.png 2x"
+                        alt="企画概要２">
+                </a>
             </div>
             <h3>Ｑ＆Ａ</h3>
             <details class="accordion_QA">
-                <summary>連載参加可能ですか？</summary>
-                <p>背景色付きのシンプルなアコーディオンメニューです。</p>
+                <summary>文字数の指定はありますか？</summary>
+                <p>
+                    ありません！<br>
+                    むしろ長編・大作大歓迎で企画期間長めにしています。
+                </p>
+            </details>
+            <details class="accordion_QA">
+                <summary>連載参加OKですか？</summary>
+                <p>OKです！期間中に1話さえ投稿してもらえれば後はご自由にどうぞ！</p>
+            </details>
+            <details class="accordion_QA">
+                <summary>期間内に完結する必要がありますか？</summary>
+                <p>
+                    期間内完結が望ましいですが、1話投稿された時点で参加作品として当HPに載せます。<br>
+                    ゆっくりご自分のペースで創作してください。
+                </p>
+            </details>
+            <details class="accordion_QA">
+                <summary>共通世界設定の二次使用の範囲について</summary>
+                <p>
+                    著作権の問題が難しいため、大きな利益が発生する可能性のある媒体での使用を禁止しています。具体的に言うとKindle、電子書籍を含む自費出版や公募への応募等です。<br>
+                    紙媒体での同人誌発行、および、インセンティブが発生するアルファポリスへの投稿はOKです！その際は必ず共通世界設定を使用していることを明記ください。
+                </p>
+            </details>
+            <details class="accordion_QA">
+                <summary>異世界と現代を股に掛けた異能バトルものは対象外ですか？</summary>
+                <p>
+                    難しい！異世界がどの程度のものかによります。「広義で同じ地球上の話であればOK」って感じです。分かりにくくてすみません……<br>
+                    以前、商業作品で例えてお答えしてますのでご参照ください → <a style="font-weight: bold;" href="https://wavebox.me/msg/76bgynde9xhayc2m/44dm7nzmq8/">絵文字箱回答</a>
+                </p>
             </details>
             <details class="accordion_QA">
                 <summary>各種バース系はありですか？</summary>
-                <p>クセがなく、どんなサイトでも使いやすい汎用性があります。</p>
+                <p>現代であればバース系および人外OKです！</p>
             </details>
         </section>
 
@@ -89,8 +123,10 @@
         <section id="kyoutuu">
             <p class="h2_caption">共通世界設定</p>
             <h2>異能の王座決定戦</h2>
-            <img src="images/kyoutuu.png" srcset="images/kyoutuu.png 1x, images/kyoutuu@2x.png 2x"
-                alt="共通設定">
+            <a href="images/kyoutuu@2x.png">
+                <img src="images/kyoutuu.png" srcset="images/kyoutuu.png 1x, images/kyoutuu@2x.png 2x"
+                    alt="共通設定">
+            </a>
         </section>
 
         <!-- 作品一覧 -->
@@ -117,9 +153,13 @@
     </main>
 
     <footer>
-        <small>&copy;2023 現代異能バトルBL企画</small> 
+        <small>&copy;<script>
+            document.write(new Date().getFullYear());
+        </script> 現代異能バトルBL企画</small> 
     </footer>
 
-
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

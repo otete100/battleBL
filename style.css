@@ -38,6 +38,7 @@ a:hover {
 
 h2 {
     font-size: 3.6rem;
+    line-height: 5rem;
     font-family: 'RocknRoll One', sans-serif;
     text-align: center;
     margin-bottom: 60px;
@@ -58,7 +59,7 @@ header {
     background: rgba(255, 255, 255, .9);
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 99;
 }
 .flex_between {
     display: flex;
@@ -129,7 +130,7 @@ h3 {
 }
 .accordion_QA {
     max-width: 800px;
-    margin: 0 auto 30px;
+    margin: 0 auto 15px;
     background-color: #fff6c2;
     border-radius: 5px;
 }
@@ -142,6 +143,7 @@ h3 {
     color: #333333;
     cursor: pointer;
     font-weight: 600;
+    text-align: left;
 }
 .accordion_QA summary::-webkit-details-marker {
     display: none;
@@ -265,7 +267,9 @@ small {
 
     /* ハンバーガーメニュー(アイコン)
     -------------------------------------------------*/
-    .hamburger_icon {
+    .hamburger {
+        background-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
+        border-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
         position: fixed;
         top: 0px;
         right: 0px;
@@ -274,50 +278,58 @@ small {
         z-index: 99;
         background-color: #f8b400;
     }
-    .hamburger_icon_text {
-        position: absolute;
+
+    /* ハンバーガーメニューの線 */
+    .hamburger span {
+        position: relative;
         bottom: 0;
         left: 0;
         right: 0;
-        color: #fff;
         font-weight: bold;
         text-align: center;
         margin: auto;
         font-size: 0.9em;
-    }
-    .hamburger_icon span,
-    .hamburger_icon span:before,
-    .hamburger_icon span:after {
-        content: '';
-        display: block;
         height: 3px;
         width: 30px;
         border-radius: 3px;
         background-color: #fff;
-        position: absolute;
-        
+        transition: ease .4s; /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+        display: block;
     }
-    .hamburger_icon span {
-        top: 30px;
-        right: 15px;
+    
+    .hamburger span:nth-child(1) {
+        top: 0;
     }
-    .hamburger_icon span:before {
-        bottom: 15px;
+    
+    .hamburger span:nth-child(2) {
+        margin: 8px auto;
     }
-    .hamburger_icon span:after {
-        top: 15px;
+    
+    .hamburger span:nth-child(3) {
+        top: 0;
     }
-    /* ハンバーガーが開いたら×印にする */
-    #hamburger_icon_check:checked ~ .hamburger_icon span {
-        background-color: #f8b400;
+
+
+    /* ハンバーガーメニュークリック後のスタイル */
+    .hamburger_menu.active {
+        transform: translateX(0);
     }
-    #hamburger_icon_check:checked ~ .hamburger_icon span::before {
-        bottom: 0;
+    
+    .hamburger.active span:nth-child(1) {
+        top: 7px;
         transform: rotate(45deg);
     }
-    #hamburger_icon_check:checked ~ .hamburger_icon span::after {
-        top: 0;
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        top: -15px;
         transform: rotate(-45deg);
+    }
+    header.active {
+        background-color: #fff;
     }
 
     /* ハンバーガーメニュー(メニュー)
@@ -336,17 +348,19 @@ small {
         transition: all 0.3s;
     }
 
-    #hamburger_icon_check:checked ~ .hamburger_nav {
+    .hamburger_nav.active {
         left: 0%;/*メニューを画面内へ*/
     }
 
-    .hamburger_nav {
-        margin-top: 200px;
+    .hamburger_nav ul {
+        margin-top: 150px;
     }
+
     .hamburger_nav li {
         font-family: 'RocknRoll One', sans-serif;
         margin-bottom: 15px;
     }
+
 
     /* トップ画像
     -------------------------------------------------*/
@@ -370,12 +384,20 @@ small {
         flex-direction: column;
         justify-content: center;
     }
+    .flex_gaiyou img,
+    #kyoutuu img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
     .accordion_QA {
-        max-width: 800px;
-        margin: 0 auto 30px;
-        background-color: #fff6c2;
-        border-radius: 5px;
+        width: 100%;
     }
 
+    /* お問合せ
+    -------------------------------------------------*/
+    .timeline {
+        width: 100%;
+    }
 
 }
