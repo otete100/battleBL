@@ -206,6 +206,12 @@ h3 {
     background-color: #f8b400;
     color: #fff;
 }
+.button_link:hover {
+    border: 2px solid #f8b400;
+    box-shadow: 0 0 0 3px #fff;
+    background-color: #fff;
+    color: #f8b400;
+}
 .timeline {
     margin: 30px auto 0;
     width: 800px;
