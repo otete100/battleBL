@@ -201,7 +201,6 @@ h3 {
     /* padding: .9em 2em; */
     height: 50px;
     border: 2px solid #fff;
-    border-radius: 5px;
     box-shadow: 0 0 0 3px #f8b400;
     background-color: #f8b400;
     color: #fff;
@@ -231,11 +230,102 @@ small {
     line-height: 60px;
 }
 
+/* 作品一覧
+-------------------------------------------------*/
+.works_buttonlist {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+.works_buttonlist .button_link {
+    margin: 0 15px;
+}
+.flex_works {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, calc(85% / 4));
+    justify-content: center;
+    row-gap: 5%;
+    -moz-column-gap: 5%;
+         column-gap: 5%;
+}
+.div_works {
+    margin-bottom: 80px;
+}
+.flex_works a {
+    text-align: left;
+    padding: 5px;
+}
+.flex_works a:hover {
+    color: #333;
+    background-color: #FFF6C2;
+}
+.works_tag {
+    display: flex;
+    line-height: 1.6rem;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+.works_tag li {
+    padding: 0 6px 0 5px;
+    border-right: 1px solid #333;
+}
+.works_tag li:first-child,
+.works_tag li:last-child {
+    border-right: none;
+}
+.works_tag .tag_r18 span {
+    padding: 3px 6px;
+    text-align: center;
+    font-family: "RocknRoll One";
+    font-size: 1.4rem;
+    color: #fff;
+    background: #f85315;
+    margin: 0 4px 0 -5px;
+}
+.works_tag .tag_all span {
+    padding: 3px;
+    font-family: "RocknRoll One";
+    font-size: 1.4rem;
+    background: #fff;
+    margin: 0 4px 0 -5px;
+    border: #333 1px solid;
+}
+h4 {
+    font-family: "RocknRoll One";
+}
+.works_card p {
+    font-size: 1.6rem;
+}
+
+
 /* 非表示
 -------------------------------------------------*/
 .hamburger_menu {
     display: none;
 }
+
+/*==================
+#loading
+==================*/
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: #222222;
+    text-align: center;
+  }
+  @media (max-width: 1023px) {
+    #loading_text .progressbar-text {
+      font-size: 1.0rem !important;
+    }
+  }
 
 /*-------------------------------------------------
 
@@ -405,5 +495,20 @@ small {
     .timeline {
         width: 100%;
     }
+
+    /* 作品一覧
+    -------------------------------------------------*/
+    .works_buttonlist {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .works_buttonlist .button_link {
+        margin: 0 0 15px;
+    }
+    .flex_works {
+        display: block;
+    }
+    
 
 }
