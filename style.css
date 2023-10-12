@@ -76,6 +76,26 @@ h1 {
     margin-left: 1.8rem;
 }
 
+.button-006 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #1da1f2;
+}
+
+.button-006:hover {
+    border: 1px solid #1da1f2;
+    background-color: #fff;
+}
+
+.button-006:hover path {
+    fill: #1da1f2;
+}
+
 /* トップ画像
 -------------------------------------------------*/
 .top_image {
@@ -108,6 +128,43 @@ h1 {
 -------------------------------------------------*/
 main.wrapper {
     text-align: center;
+}
+
+.button-034 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 5px;
+    /* width: 120px; */
+    margin: 0 auto;
+    padding: .7em;
+    border: none;
+    border-radius: 5px;
+    background-color: #1da1f2;
+    color: #fff;
+    font-size: .8em;
+}
+
+.button-034:hover {
+    border: 1px solid #1da1f2;
+    background-color: #fff;
+}
+
+.button-034 svg {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.button-034 span {
+    font-weight: 600;
+}
+
+.button-034:hover path {
+    fill: #1da1f2;
+}
+
+.button-034:hover span {
+    color: #1da1f2;
 }
 
 /* 企画概要
