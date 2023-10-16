@@ -281,18 +281,23 @@ small {
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, calc(85% / 4));
+    grid-template-columns: repeat(3, 270px);
     justify-content: center;
-    row-gap: 5%;
-    -moz-column-gap: 5%;
-         column-gap: 5%;
+    row-gap: 3%;
+    -moz-column-gap: 3%;
+         column-gap: 3%;
 }
 .div_works {
     margin-bottom: 80px;
 }
-.flex_works a {
+.works_card {
+    display: block;
     text-align: left;
-    padding: 5px;
+    padding: 25px 20px 15px;
+    width: 270px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 .flex_works a:hover {
     color: #333;
@@ -335,7 +340,6 @@ h4 {
 .works_card p {
     font-size: 1.6rem;
 }
-
 
 /* 非表示
 -------------------------------------------------*/
@@ -545,6 +549,11 @@ h4 {
     .flex_works {
         display: block;
     }
-    
+    .works_card {
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
 
 }
