@@ -41,3 +41,24 @@ $(".hamburger_a").click(function () {
     head.removeClass("active");
 });
 
+//テキストを含む一般的なモーダル
+// $(".works_card").modaal({
+// 	overlay_close:true,//モーダル背景クリック時に閉じるか
+// 	before_open:function(){// モーダルが開く前に行う動作
+// 	  $('html').css('overflow-y','hidden');/*縦スクロールバーを出さない*/
+// 	},
+// 	after_close:function(){// モーダルが閉じた後に行う動作
+// 	  $('html').css('overflow-y','scroll');/*縦スクロールバーを出す*/
+// 	}
+// });
+$(function () {
+	$('.works_card, .link_rule').magnificPopup({
+	  type: 'inline',
+	  preloader: false
+	});
+	//閉じるリンクの設定
+	$(document).on('click', '.popup-modal-dismiss', function (e) { 
+	  e.preventDefault();
+	  $.magnificPopup.close();
+	});
+  });
