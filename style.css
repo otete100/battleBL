@@ -216,7 +216,7 @@ h3 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 100px;
+    margin: 80px auto;
 }
 .fujossy div {
     width: 500px;
@@ -600,7 +600,7 @@ h4 {
     }
 
     .fujossy div {
-        margin-bottom: 0;
+        margin: 0;
     }
 
     /* お問合せ
