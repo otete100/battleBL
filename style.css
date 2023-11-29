@@ -211,6 +211,18 @@ h3 {
     transform: none;
     opacity: 1;
 }
+.fujossy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.fujossy div {
+    width: 500px;
+    height: 160px;
+    margin-bottom: 20px;
+}
 
 /* 共通世界設定
 -------------------------------------------------*/
@@ -249,7 +261,7 @@ h3 {
     color: #f8b400;
 }
 .timeline {
-    margin: 30px auto 0;
+    margin: 30px auto 50px;
     width: 800px;
 }
 
@@ -579,8 +591,16 @@ h4 {
         height: auto;
         margin-bottom: 30px;
     }
-    .accordion_QA {
+    .fujossy {
+        margin-top: 50px;
+    }
+    .accordion_QA,
+    .fujossy div {
         width: 100%;
+    }
+
+    .fujossy div {
+        margin-bottom: 0;
     }
 
     /* お問合せ
