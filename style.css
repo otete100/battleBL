@@ -291,7 +291,7 @@ small {
 }
 .flex_works {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 80px;
     display: grid;
     grid-template-columns: repeat(3, 300px);
     justify-content: center;
