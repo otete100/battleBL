@@ -52,7 +52,7 @@ $(".hamburger_a").click(function () {
 // 	}
 // });
 $(function () {
-	$('.works_card, .link_rule').magnificPopup({
+	$('.works_modal, .link_rule').magnificPopup({
 	  type: 'inline',
 	  preloader: false
 	});

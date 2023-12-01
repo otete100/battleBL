@@ -216,7 +216,7 @@ h3 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 80px auto;
+    margin: 50px auto;
 }
 .fujossy div {
     width: 500px;
@@ -284,7 +284,7 @@ small {
 .works_buttonlist {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 .works_buttonlist .button_link {
     margin: 0 15px;
@@ -356,6 +356,10 @@ h4 {
     height: 150px;
     overflow: hidden;
 }
+.p_info {
+    margin: 20px 0;
+    font-size: 1.6rem;
+}
 
 /* 非表示
 -------------------------------------------------*/
@@ -412,12 +416,12 @@ h4 {
 }
 .link_rule {
     display: inline-block;
-    margin-bottom: 50px;
-    font-size: 2.4rem;
+    font-size: 2.0rem;
+    margin-top: 50px;
 }
 
 .modal_buttonlist {
-    margin: 30px 0 20px;
+    margin: 20px 0;
     display: flex;
 }
 .mfp-content {
@@ -635,6 +639,9 @@ h4 {
         height: 50px;
         background-color: #f8b400;
         color: #fff;
+    }
+    .link_FA {
+        font-size: 1.6rem;
     }
 
 
