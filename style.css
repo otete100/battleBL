@@ -392,8 +392,8 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    margin-right: 30px;
+    padding: 10px 15px;
+    margin: 0 20px 20px 0;
     height: 50px;
     background-color: #f8b400;
     color: #fff;
@@ -423,6 +423,7 @@ h4 {
 .modal_buttonlist {
     margin: 20px 0;
     display: flex;
+    flex-wrap: wrap;
 }
 .mfp-content {
     max-width: 750px;
