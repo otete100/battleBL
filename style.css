@@ -294,6 +294,7 @@ small {
     margin: 0 auto 80px;
     display: grid;
     grid-template-columns: repeat(3, 300px);
+    grid-auto-rows: 1fr;
     justify-content: center;
     row-gap: 8%;
     -moz-column-gap: 3%;
@@ -351,6 +352,7 @@ h4 {
 }
 .works_card p {
     font-size: 1.6rem;
+    line-height: 2.2rem;
 }
 .works_illust {
     height: 150px;
