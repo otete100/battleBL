@@ -49,6 +49,10 @@ section {
     padding-top: 60px;
 }
 
+#bosyuu {
+    padding: 0;
+}
+
 /* ヘッダー
 -------------------------------------------------*/
 header {
@@ -263,6 +267,16 @@ h3 {
 .timeline {
     margin: 30px auto 50px;
     width: 800px;
+}
+.button_red {
+    box-shadow: 0 0 0 3px red;
+    background-color: red;
+}
+.button_red:hover {
+    border: 2px solid red;
+    box-shadow: 0 0 0 3px #fff;
+    background-color: #fff;
+    color: red;
 }
 
 /* フッター
