@@ -108,6 +108,12 @@ h1 {
     font-size: 6rem;
 }
 
+.top_banner {
+    max-width: 1024px;
+    text-align: center;
+    margin: 0 auto;
+}
+
 /* サイト概要
 -------------------------------------------------*/
 main.wrapper {
@@ -149,6 +155,10 @@ main.wrapper {
 
 .button-034:hover span {
     color: #1da1f2;
+}
+
+#sitegaiyou {
+    margin-top: 40px;
 }
 
 /* 企画概要
@@ -479,6 +489,10 @@ h4 {
     section {
         margin: 40px auto 100px;
         padding-top: 60px;
+    }
+
+    #sitegaiyou {
+        margin-top: 0;
     }
 
     /* ヘッダー
