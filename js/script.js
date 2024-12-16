@@ -61,4 +61,40 @@ $(function () {
 	  e.preventDefault();
 	  $.magnificPopup.close();
 	});
+
+	//スライダー
+	$('.top_image_slide').slick({
+		autoplay: true,
+		arrows: false,
+		dots: false,
+		infinite: true,
+		autoplaySpeed: 3000,
+		asNavFor:".top_image_thumb"
+	});
+
+	
+	$(document).ready(function() {
+		if ($(window).width() <= 1023) {
+			$('.top_image_thumb').slick({
+				slidesToShow: 3,
+				vertical: false,
+				focusOnSelect: true, // サムネイルクリックを有効化
+				arrows: false,
+				dots: false,
+				infinite: true,
+				asNavFor:".top_image_slide"
+			});
+		}
+		else {
+			$('.top_image_thumb').slick({
+				slidesToShow: 3,
+				vertical: true,
+				focusOnSelect: true, // サムネイルクリックを有効化
+				arrows: false,
+				dots: false,
+				infinite: true,
+				asNavFor:".top_image_slide"
+			});
+		}
+	 });
   });
