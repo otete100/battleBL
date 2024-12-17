@@ -77,13 +77,6 @@ header {
     display: flex;
     justify-content: space-between;
 }
-h1 {
-    font-size: 7rem;
-    line-height: 7rem;
-    width: 1000px;
-    color: #333333;
-}
-
 .header_nav ul {
     display: flex;
 }
@@ -133,6 +126,12 @@ h1 {
         color: #fff;
         padding: 30px 20px 30px;
         font-size: 1.4rem;
+    }
+    h1 {
+        font-size: 7rem;
+        line-height: 7rem;
+        width: 1000px;
+        color: #333333;
     }
     z-index: 995;
 }
@@ -558,10 +557,14 @@ h4 {
     section {
         margin: 40px auto 100px;
         padding-top: 60px;
-        background-color: rgba(255, 255, 255, 0.75);
+        background-color: rgba(255, 255, 255, 0.9);
         padding-left: 15px;
         padding-right: 15px;
         padding-bottom: 20px;
+    }
+
+    #bosyuu {
+        background-color: initial;
     }
 
     #sitegaiyou {
@@ -570,6 +573,7 @@ h4 {
 
     body {
         background-image: url(images/bg_new_sp.webp);
+        background-size: cover;
     }
 
     /* ヘッダー
@@ -685,10 +689,10 @@ h4 {
         padding: 0;
         position: initial;
     }
-    h1 {
+    /* h1 {
         width: 80%;
         line-height: 3rem;
-    }
+    } */
     .top_image_slide {
         img {height: 300px;}
     }
